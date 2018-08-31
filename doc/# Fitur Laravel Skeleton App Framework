@@ -1,0 +1,54 @@
+# Fitur Laravel Skeleton App Framework
+- Profiling
+- Manage Menu
+- Manage Group
+- Manage User
+- App Setting
+
+
+# Database Laraton
+* Administrative (provinces, regencies, districts, villages)
+	- indonesia.sql
+
+* Users
+	- id
+	- name
+	- fullname
+	- email
+	- gender
+	- photo
+	- poster
+	- group_id
+	- birth_place
+	- birth_date
+	- village_id
+	- address
+	- about
+	- skin
+	
+* Educationals
+	- id
+	- user_id
+	- level
+	- name
+	- majors
+	- place
+	- year_in
+	- year_out
+
+* Works
+	- id
+	- user_id
+	- name
+	- position
+	- office
+	- place
+	- year_in
+	- year_out
+
+* Socials
+	- id
+	- user_id
+	- name
+	- link
+	- icon
