@@ -54,19 +54,19 @@ php artisan serve --port=88
 - Ada 3 user grup dalam framework aplikasi ini:
 ```
 SUPERADMIN
-username/email 	: superadmin@server.com
-password		: rahasiasuper
+username 	: superadmin@server.com
+password	: rahasiasuper
 
 ADMIN
-username/email 	: admin@server.com
-password		: rahasiaadmin
+username 	: admin@server.com
+password	: rahasiaadmin
 
 USER
-username/email 	: imale@server.com
-password		: rahasiamale
+username 	: imale@server.com
+password	: rahasiamale
 
-username/email 	: ifemale@server.com
-password		: rahasiafemale
+username 	: ifemale@server.com
+password	: rahasiafemale
 ```
 
 ## SUPPORT
