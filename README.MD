@@ -1,9 +1,28 @@
 # LARAVEL SKELETON APP FRAMEWORK (LARATON)
-Framework Aplikasi berbasis Laravel
+Framework Aplikasi berbasis Laravel.
+Melalui Skeleton/Rangka Aplikasi ini, anda bisa membuat sebuah aplikasi tanpa harus membuatnya dari nol. Fitur-fitur dasar yang sudah ada di LARATON ini antara lain:
+- Authentication (Laravel Auth)
+- Login
+- Register
+- Konfigurasi Menu
+- Konfigurasi Grup
+- Konfigurasi Role/Hak Akses
+- Setting Aplikasi
+- [AdminBSB Template](https://github.com/gurayyarar/AdminBSBMaterialDesign "AdminBSBMaterialDesign")
+- Setting Profile
+	* Informasi Pribadi
+	* Media Sosial
+	* Foto Profile
+	* Poster
+	* Riwayat Pendidikan
+	* Riwayat Pekerjaan
+	* DLL
 
 ## TECHNOLOGY
 - Laravel 5.6
 - AdminBSBMaterialDesign Bootstrap Template
+- Intervention Image
+- Laravel Collective
 - DLL
 
 ## REQUIREMENT
