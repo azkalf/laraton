@@ -19,7 +19,7 @@ Melalui Skeleton/Rangka Aplikasi ini, anda bisa membuat sebuah aplikasi tanpa ha
 	* DLL
 
 ## TECHNOLOGY
-- Laravel 5.6
+- Laravel 5.8
 - AdminBSBMaterialDesign Bootstrap Template
 - Intervention Image
 - Laravel Collective
