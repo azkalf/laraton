@@ -363,6 +363,7 @@
                     success: function(data) {
                         $('#logo').attr('src', "{{ asset('uploads/images') }}/"+data.logo+"?"+new Date().getTime());
                         $('#setting-logo').attr('src', "{{ asset('uploads/images') }}/"+data.logo+"?"+new Date().getTime());
+                        $('#favicon').attr('href', "{{ asset('uploads/images/fav_') }}"+data.logo+"?"+new Date().getTime());
                         showAlert(data.message, 'bg-blue');
                         $('.overlay-logo').hide();
                     },

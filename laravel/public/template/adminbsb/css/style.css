@@ -20,8 +20,8 @@
     white-space: nowrap;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    overflow: hidden; }
+    /*text-overflow: ellipsis;
+    overflow: hidden; */}
   .navbar .navbar-custom-right-menu {
     float: right; }
   .navbar .navbar-toggle {
@@ -6658,8 +6658,8 @@ fieldset[disabled] .form-control {
     white-space: nowrap;
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    overflow: hidden; }
+    /*text-overflow: ellipsis;
+    overflow: hidden; */}
   .navbar .navbar-custom-right-menu {
     float: right; }
   .navbar .navbar-toggle {

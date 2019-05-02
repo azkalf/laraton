@@ -15,7 +15,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>@yield('title') - {{ $setting->appname }}</title>
     <!-- Favicon-->
-    <link rel="icon" href="{{ asset('template/adminbsb/favicon.ico') }}" type="image/x-icon">
+    <link id="favicon" rel="icon" href="{{ asset('uploads/images/fav_'.$setting->logo) }}" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -95,7 +95,7 @@
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html" style="padding-top: 5px;"><img id="logo" src="{{ asset('uploads/images/fit_'.$setting->logo) }}" align="left" style="height: 40px; margin-right: 5px;"><span id="appname" class="hidden-xs hidden-sm"> {{ $setting->appname }}<br><small>{!! $setting->subname !!}</small></span></a>
+                <a class="navbar-brand" href="{{asset('/home')}}" style="padding-top: 5px;"><img id="logo" src="{{ asset('uploads/images/fit_'.$setting->logo) }}" align="left" style="height: 40px; margin-right: 5px;"><span id="appname" class="hidden-xs hidden-sm"> {{ $setting->appname }}<br><small>{!! $setting->subname !!}</small></span></a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">

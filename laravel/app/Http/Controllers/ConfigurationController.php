@@ -314,11 +314,17 @@ class ConfigurationController extends Controller
                 $logo->move($destination, $filename);
                 // open file a image resource
                 $img = Image::make($destination.$filename);
-
                 // crop image
                 $img->resize(null, 40, function ($constraint) {
                     $constraint->aspectRatio();
                 })->save($destination.'fit_'.$filename);
+                if ($img->width() > $img->height()) {
+                    $img->resize(40, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    });
+                }
+                // crop fav_image
+                $img->resizeCanvas(40, 40, 'center')->save($destination.'fav_'.$filename);
                 $setting->logo = $filename;
                 if($setting->save()) {
                     $data['logo'] = $filename;
