@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Login | {{ App\Setting::first()->appname }}</title>
+    <title>Login | {{ config('app.name') }}</title>
     <!-- Favicon-->
-    <link rel="icon" href="{{ asset('template/adminbsb/favicon.ico') }}" type="image/x-icon">
+    <link id="favicon" rel="icon" href="{{ asset('uploads/images/fav_'.$setting->logo) }}" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
