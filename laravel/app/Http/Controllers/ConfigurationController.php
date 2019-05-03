@@ -381,9 +381,9 @@ class ConfigurationController extends Controller
                 $img = Image::make($destination.$filename);
 
                 // crop image
-                $img->resize(null, 40, function ($constraint) {
-                    $constraint->aspectRatio();
-                })->save($destination.'fit_'.$filename);
+                $img->fit(300, 135, function ($constraint) {
+                    $constraint->upsize();
+                }, 'top')->save($destination.'fit_'.$filename);
                 $setting->poster = $filename;
                 if($setting->save()) {
                     $data['poster'] = $filename;
@@ -445,11 +445,6 @@ class ConfigurationController extends Controller
                 $bg->move($destination, $filename);
                 // open file a image resource
                 $img = Image::make($destination.$filename);
-
-                // crop image
-                $img->resize(null, 40, function ($constraint) {
-                    $constraint->aspectRatio();
-                })->save($destination.'fit_'.$filename);
                 $setting->bg = $filename;
                 if($setting->save()) {
                     $data['bg'] = $filename;
