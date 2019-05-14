@@ -98,4 +98,4 @@ saklu07@gmail.com
 regards.
 
 Azkal Fikri
-http://azkalf.machinetik.com
+http://azkalfikri.id
