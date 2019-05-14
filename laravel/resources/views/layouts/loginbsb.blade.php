@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
-
+<?php
+    $setting = App\Setting::first();
+?>
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Login | {{ config('app.name') }}</title>
+    <title>LOGIN - {{ config('app.name') }}</title>
     <!-- Favicon-->
     <link id="favicon" rel="icon" href="{{ asset('uploads/images/fav_'.$setting->logo) }}" type="image/x-icon">
 
