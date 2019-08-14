@@ -67,7 +67,8 @@ class ConfigurationController extends Controller
         $menu->icon = $request->icon;
         $menu->url = $request->url;
         $menu->parent = 0;
-        $menu->order = 0;
+        $order = Menu::where('parent', 0)->max('order');
+        $menu->order = $order + 1;
         if ($menu->save()) {
             $data['id'] = $menu->id;
             $data['title'] = $menu->title;
