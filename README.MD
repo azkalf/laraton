@@ -1,6 +1,6 @@
 # LARAVEL SKELETON APP FRAMEWORK (LARATON)
-Framework Aplikasi berbasis Laravel.
-Demo Aplikasi bisa dilihat di [http://laraton.azkalfikri.id](http://laraton.azkalfikri.id "Laraton Demo")
+Framework Aplikasi berbasis Laravel.  
+Demo Aplikasi bisa dilihat di [http://laraton.azkalfikri.id](http://laraton.azkalfikri.id "Laraton Demo").  
 Melalui Skeleton/Rangka Aplikasi ini, anda bisa membuat sebuah aplikasi tanpa harus membuatnya dari nol. Fitur-fitur dasar yang sudah ada di LARATON ini antara lain:
 - Authentication (Laravel Auth)
 - Login
