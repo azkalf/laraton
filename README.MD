@@ -1,5 +1,6 @@
 # LARAVEL SKELETON APP FRAMEWORK (LARATON)
 Framework Aplikasi berbasis Laravel.
+Demo Aplikasi bisa dilihat di [http://laraton.azkalfikri.id](http://laraton.azkalfikri.id "Laraton Demo")
 Melalui Skeleton/Rangka Aplikasi ini, anda bisa membuat sebuah aplikasi tanpa harus membuatnya dari nol. Fitur-fitur dasar yang sudah ada di LARATON ini antara lain:
 - Authentication (Laravel Auth)
 - Login
@@ -45,7 +46,6 @@ Melalui Skeleton/Rangka Aplikasi ini, anda bisa membuat sebuah aplikasi tanpa ha
 composer install
 ```
 - Setelah selesai kemudian buatlah database di mysql
-- PENTING!! Import file sql yang ada di doc/indonesia.sql ke database yang telah di buat tadi
 - Buatlah file .env (copy paste dari laravel/.env.example) di direktori laravel/ kemudian sesuaikan konfigurasinya (database, mail setting, etc)
 - Untuk generate key jalankan perintah berikut
 ```
@@ -55,7 +55,8 @@ php artisan key:generate
 ```
 php artisan migrate
 ```
-- Setelah selesai jalankan perintah berikut untuk memulai aplikasi
+- Setelah selesai migrasi database, silahkan import data administrative indonesia (doc/indonesia.sql) ke database yang sudah dibuat tadi.
+- Kemudian jalankan perintah berikut untuk memulai aplikasi
 ```
 php artisan serve
 ```
@@ -93,7 +94,10 @@ password	: rahasiafemale
 ```
 saklu07@gmail.com
 ```
-
+- Atau bisa juga via WhatsApp ke
+```
+089658590616
+```
 
 regards.
 
