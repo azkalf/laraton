@@ -301,7 +301,7 @@ class ConfigurationController extends Controller
         $setting = Setting::first();
         if ($request->hasFile('logo')) {
             $logo = $request->file('logo');
-            $destination = base_path().'/public/uploads/images/';
+            $destination = public_path().'/uploads/images/';
             $filename = 'logo_aplikasi.'.$logo->getClientOriginalExtension();
             if ($logo->isValid()) {
                 if ($setting->logo != 'mtk_white.png' && !empty($setting->logo)) {
@@ -347,7 +347,7 @@ class ConfigurationController extends Controller
         $setting->logo = 'mtk_white.png';
         if ($setting->save()) {
             if ($setting->logo != 'mtk_white.png' && !empty($setting->logo)) {
-                $destination = base_path().'/public/uploads/images/';
+                $destination = public_path().'/uploads/images/';
                 if (file_exists($destination.$oldlogo)) {
                     unlink($destination.$oldlogo);
                 }
@@ -366,7 +366,7 @@ class ConfigurationController extends Controller
         $setting = Setting::first();
         if ($request->hasFile('poster')) {
             $poster = $request->file('poster');
-            $destination = base_path().'/public/uploads/images/posters/';
+            $destination = public_path().'/uploads/images/posters/';
             $filename = 'poster_aplikasi.'.$poster->getClientOriginalExtension();
             if ($poster->isValid()) {
                 if ($setting->poster != 'poster.jpg' && !empty($setting->poster)) {
@@ -411,7 +411,7 @@ class ConfigurationController extends Controller
         }
         if ($setting->save()) {
             if ($setting->poster != 'poster.jpg' && !empty($setting->poster)) {
-                $destination = base_path().'/public/uploads/images/posters/';
+                $destination = public_path().'/uploads/images/posters/';
                 if (file_exists($destination.$oldposter)) {
                     unlink($destination.$oldposter);
                 }
@@ -432,7 +432,7 @@ class ConfigurationController extends Controller
         $setting = Setting::first();
         if ($request->hasFile('bg')) {
             $bg = $request->file('bg');
-            $destination = base_path().'/public/uploads/images/';
+            $destination = public_path().'/uploads/images/';
             $filename = 'bg_aplikasi.'.$bg->getClientOriginalExtension();
             if ($bg->isValid()) {
                 if ($setting->bg != 'bg.jpg' && !empty($setting->bg)) {
@@ -467,7 +467,7 @@ class ConfigurationController extends Controller
         $setting->bg = 'bg.jpg';
         if ($setting->save()) {
             if ($setting->bg != 'bg.jpg' && !empty($setting->bg)) {
-                $destination = base_path().'/public/uploads/images/';
+                $destination = public_path().'/uploads/images/';
                 if (file_exists($destination.$oldbg)) {
                     unlink($destination.$oldbg);
                 }

@@ -90,15 +90,15 @@ Route::post('/user/get_user', 'ConfigurationController@get_user');
 Route::post('/user/create', 'ConfigurationController@create_user');
 Route::post('/user/delete_user', 'ConfigurationController@delete_user');
 
-// MANAGE SETTING
-Route::get('/setting', 'ConfigurationController@setting');
-Route::post('/setting/update_setting', 'ConfigurationController@update_setting');
-Route::post('/setting/reset_logo', 'ConfigurationController@reset_logo');
-Route::post('/setting/update_logo', 'ConfigurationController@update_logo');
-Route::post('/setting/reset_poster', 'ConfigurationController@reset_poster');
-Route::post('/setting/update_poster', 'ConfigurationController@update_poster');
-Route::post('/setting/reset_bg', 'ConfigurationController@reset_bg');
-Route::post('/setting/update_bg', 'ConfigurationController@update_bg');
+// MANAGE PENGATURAN
+Route::get('/pengaturan', 'ConfigurationController@setting');
+Route::post('/pengaturan/update_pengaturan', 'ConfigurationController@update_setting');
+Route::post('/pengaturan/reset_logo', 'ConfigurationController@reset_logo');
+Route::post('/pengaturan/update_logo', 'ConfigurationController@update_logo');
+Route::post('/pengaturan/reset_poster', 'ConfigurationController@reset_poster');
+Route::post('/pengaturan/update_poster', 'ConfigurationController@update_poster');
+Route::post('/pengaturan/reset_bg', 'ConfigurationController@reset_bg');
+Route::post('/pengaturan/update_bg', 'ConfigurationController@update_bg');
 
 // MANAGE PROFILE
 Route::get('/profile', 'HomeController@profile')->name('profile');
