@@ -63,7 +63,7 @@ class InsertPrimaryDatas extends Migration
             ['id'=>2, 'title'=>'Menu', 'icon'=>'menu', 'parent'=>1, 'url'=>'menu', 'order'=>1],
             ['id'=>3, 'title'=>'Grup', 'icon'=>'group', 'parent'=>1, 'url'=>'group', 'order'=>2],
             ['id'=>4, 'title'=>'User', 'icon'=>'person', 'parent'=>1, 'url'=>'user', 'order'=>3],
-            ['id'=>5, 'title'=>'Setting', 'icon'=>'settings', 'parent'=>1, 'url'=>'pengaturan', 'order'=>4],
+            ['id'=>5, 'title'=>'Setting', 'icon'=>'settings', 'parent'=>1, 'url'=>'setting', 'order'=>4],
         ]);
 
         DB::table('roles')->insert([
@@ -80,8 +80,8 @@ class InsertPrimaryDatas extends Migration
             'appname' => 'LARATON - ADMINBSB',
             'subname' => 'Laravel Skeleton with Admin BootStrap Base Material Design',
             'skin' => 'blue',
-            'copyright' => '&copy; 2018 <a href="javascript:void(0);">Laraton - AdminBSB</a>.',
-            'version' => '<b>Version: </b>1.0',
+            'copyright' => '&copy; 2019 Laraton - AdminBSB',
+            'version' => 'Version: 1.0',
             'poster' => 'poster.jpg',
             'logo' => 'mtk_white.png',
             'bg' => 'bg.jpg',

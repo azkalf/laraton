@@ -1,5 +1,5 @@
 @extends('layouts.adminbsb')
-@section('title', 'pengaturan')
+@section('title', 'Setting')
 
 @section('content')
 <div class="row clearfix">
@@ -8,7 +8,7 @@
             <div class="header">
                 <div class="row clearfix">
                     <div class="col-xs-12 col-sm-6">
-                        <h2>Basic pengaturan</h2>
+                        <h2>Basic Setting</h2>
                     </div>
                 </div>
             </div>
@@ -17,32 +17,32 @@
                     <div class="col-sm-12">
                         <div class="form-group form-float">
                             <div class="form-line success">
-                                <input type="text" id="pengaturan-appname" name="appname" class="form-control" value="{{ $setting->appname }}" required="required">
-                                <label class="form-label" for="pengaturan-appname">Nama Aplikasi <span class="col-red">*</span></label>
+                                <input type="text" id="setting-appname" name="appname" class="form-control" value="{{ $setting->appname }}" required="required">
+                                <label class="form-label" for="setting-appname">Nama Aplikasi <span class="col-red">*</span></label>
                             </div>
                         </div>
                         <div class="form-group form-float">
                             <div class="form-line success">
-                                <input type="text" id="pengaturan-subname" name="subname" class="form-control" value="{{ $setting->subname }}" required="required">
-                                <label class="form-label" for="pengaturan-subname">Sub Nama Aplikasi <span class="col-red">*</span></label>
+                                <input type="text" id="setting-subname" name="subname" class="form-control" value="{{ $setting->subname }}" required="required">
+                                <label class="form-label" for="setting-subname">Sub Nama Aplikasi <span class="col-red">*</span></label>
                             </div>
                         </div>
                         <div class="form-group form-float">
                             <div class="form-line success">
-                                <input type="text" id="pengaturan-copyright" name="copyright" class="form-control" value="{{ $setting->copyright }}" required="required">
-                                <label class="form-label" for="pengaturan-copyright">Copyright <span class="col-red">*</span></label>
+                                <input type="text" id="setting-copyright" name="copyright" class="form-control" value="{{ $setting->copyright }}" required="required">
+                                <label class="form-label" for="setting-copyright">Copyright <span class="col-red">*</span></label>
                             </div>
                         </div>
                         <div class="form-group form-float">
                             <div class="form-line success">
-                                <input type="text" id="pengaturan-version" name="version" class="form-control" value="{{ $setting->version }}" required="required">
-                                <label class="form-label" for="pengaturan-version">Versi <span class="col-red">*</span></label>
+                                <input type="text" id="setting-version" name="version" class="form-control" value="{{ $setting->version }}" required="required">
+                                <label class="form-label" for="setting-version">Versi <span class="col-red">*</span></label>
                             </div>
                         </div>
-                        <label class="form-label" for="pengaturan-skin">Default Skin <span class="col-red">*</span></label>
+                        <label class="form-label" for="setting-skin">Default Skin <span class="col-red">*</span></label>
                         <div class="form-group form-float">
                             <div class="form-line success">
-                                {{ Form::select('skin', skins(), $setting->skin, ['class'=>'form-control show-tick', 'id'=>'pengaturan-skin', 'required'=>"required"]) }}
+                                {{ Form::select('skin', skins(), $setting->skin, ['class'=>'form-control show-tick', 'id'=>'setting-skin', 'required'=>"required"]) }}
                             </div>
                         </div>
                         <div id="buttons">
@@ -65,7 +65,7 @@
                     <div class="col-xs-12 m-b-0">
                         <div class="image-content">
                             <div class="image-overlay overlay-bg"><div class="image-overlay-content"><img src="{{ asset('images/loader.gif')}}" alt="Loading..."/></div></div>
-                            <img src="{{ asset('uploads/images/'.$setting->bg) }}" class="img-responsive thumbnail" id="pengaturan-bg" style="width: 100%; cursor: pointer;" data-toggle="modal" data-target="#bg-update">
+                            <img src="{{ asset('uploads/images/'.$setting->bg) }}" class="img-responsive thumbnail" id="setting-bg" style="width: 100%; cursor: pointer;" data-toggle="modal" data-target="#bg-update">
                         </div>
                         <form id="uploadBg" method="post" enctype="multipart/form-data">
                             <input type="file" name="bg" id="input-bg" style="display: none;" />
@@ -89,7 +89,7 @@
                     <div class="col-xs-12 m-b-0">
                         <div class="image-content">
                             <div class="image-overlay overlay-logo"><div class="image-overlay-content"><img src="{{ asset('images/loader.gif')}}" alt="Loading..."/></div></div>
-                            <img src="{{ asset('uploads/images/'.$setting->logo) }}" class="img-responsive thumbnail bg-striped" id="pengaturan-logo" style="width: 100%; cursor: pointer;" data-toggle="modal" data-target="#logo-update">
+                            <img src="{{ asset('uploads/images/'.$setting->logo) }}" class="img-responsive thumbnail bg-striped" id="setting-logo" style="width: 100%; cursor: pointer;" data-toggle="modal" data-target="#logo-update">
                         </div>
                         <form id="uploadLogo" method="post" enctype="multipart/form-data">
                             <input type="file" name="logo" id="input-logo" style="display: none;" />
@@ -111,7 +111,7 @@
                     <div class="col-xs-12 m-b-0">
                         <div class="image-content">
                             <div class="image-overlay overlay-poster"><div class="image-overlay-content"><img src="{{ asset('images/loader.gif')}}" alt="Loading..."/></div></div>
-                            <img src="{{ asset('uploads/images/posters/'.$setting->poster) }}" class="img-responsive thumbnail" id="pengaturan-poster" style="width: 100%; cursor: pointer;" data-toggle="modal" data-target="#poster-update">
+                            <img src="{{ asset('uploads/images/posters/'.$setting->poster) }}" class="img-responsive thumbnail" id="setting-poster" style="width: 100%; cursor: pointer;" data-toggle="modal" data-target="#poster-update">
                         </div>
                         <form id="uploadPoster" method="post" enctype="multipart/form-data">
                             <input type="file" name="poster" id="input-poster" style="display: none;" />
@@ -225,13 +225,13 @@
             closeOnConfirm: false
         }, function () {
             $.ajax({
-                url: "{{url('pengaturan/reset_logo')}}",
+                url: "{{url('setting/reset_logo')}}",
                 data: {_token: '{{ csrf_token() }}'},
                 type: 'POST',
                 success: function(data) {
                     swal("Berhasil!", data, "success");
                     $('#logo').attr('src', "{{ asset('uploads/images/mtk_white.png') }}");
-                    $('#pengaturan-logo').attr('src', "{{ asset('uploads/images/mtk_white.png') }}");
+                    $('#setting-logo').attr('src', "{{ asset('uploads/images/mtk_white.png') }}");
                 },
                 error: function(data) {
                     swal("Gagal!", data, "error");
@@ -252,7 +252,7 @@
             closeOnConfirm: false
         }, function () {
             $.ajax({
-                url: "{{url('pengaturan/reset_poster')}}",
+                url: "{{url('setting/reset_poster')}}",
                 data: {_token: '{{ csrf_token() }}'},
                 type: 'POST',
                 dataType: 'json',
@@ -261,7 +261,7 @@
                     $('#poster_image').attr('src', "{{ asset('uploads/images/posters') }}/"+data.poster);
                     $('#fit_poster_image').css('background', "url('{{ asset('uploads/images/posters') }}/fit_"+data.poster);
                     $('#fit_poster_image').css('background-size', 'cover');
-                    $('#pengaturan-poster').attr('src', "{{ asset('uploads/images/posters/poster.jpg') }}");
+                    $('#setting-poster').attr('src', "{{ asset('uploads/images/posters/poster.jpg') }}");
                 },
                 error: function(data) {
                     swal("Gagal!", data.message, "error");
@@ -282,13 +282,13 @@
             closeOnConfirm: false
         }, function () {
             $.ajax({
-                url: "{{url('pengaturan/reset_bg')}}",
+                url: "{{url('setting/reset_bg')}}",
                 data: {_token: '{{ csrf_token() }}'},
                 type: 'POST',
                 success: function(data) {
                     swal("Berhasil!", data, "success");
                     $('#bg').attr('src', "{{ asset('uploads/images/bg.jpg') }}");
-                    $('#pengaturan-bg').attr('src', "{{ asset('uploads/images/bg.jpg') }}");
+                    $('#setting-bg').attr('src', "{{ asset('uploads/images/bg.jpg') }}");
                 },
                 error: function(data) {
                     swal("Gagal!", data, "error");
@@ -300,11 +300,11 @@
 
     $(function () {
         $('#save').on('click', function() {
-            var appname = $('#pengaturan-appname').val();
-            var subname = $('#pengaturan-subname').val();
-            var copyright = $('#pengaturan-copyright').val();
-            var version = $('#pengaturan-version').val();
-            var skin = $('#pengaturan-skin').val();
+            var appname = $('#setting-appname').val();
+            var subname = $('#setting-subname').val();
+            var copyright = $('#setting-copyright').val();
+            var version = $('#setting-version').val();
+            var skin = $('#setting-skin').val();
             $('#save').attr('disabled', 'disabled');
             if (appname == '' || copyright == '' || version == '' || skin == '' || subname == '') {
                 swal("Eitss!", 'Isi semua datanya dong.. Ada yang belum diisi tuh!!', "error");
@@ -315,14 +315,14 @@
                 $.ajax({
                     type: "POST",
                     data: {_token: '{{ csrf_token() }}', appname:appname, subname:subname, copyright:copyright, version:version, skin:skin},
-                    url: "{{ url('/pengaturan/update_pengaturan') }}",
+                    url: "{{ url('/setting/update_setting') }}",
                     success: function(data) {
                         showAlert(data, 'bg-blue');
                         setInterval(function() {
                             $('#save').removeAttr('disabled');
                         }, 2000);
                         $('#appname').html(appname+'<br><small>'+subname+'</small>');
-                        document.title = 'pengaturan - '+appname;
+                        document.title = 'setting - '+appname;
                         $('.copyright').html(copyright);
                         $('.version').html(version);
                     },
@@ -350,7 +350,7 @@
                 form.append('_token', '{{ csrf_token() }}');
                 form.append('logo', logo);
                 $.ajax({
-                    url: "{{url('pengaturan/update_logo')}}",
+                    url: "{{url('setting/update_logo')}}",
                     data: form,
                     dataType: 'json',
                     cache: false,
@@ -359,7 +359,7 @@
                     type: 'POST',
                     success: function(data) {
                         $('#logo').attr('src', "{{ asset('uploads/images') }}/"+data.logo+"?"+new Date().getTime());
-                        $('#pengaturan-logo').attr('src', "{{ asset('uploads/images') }}/"+data.logo+"?"+new Date().getTime());
+                        $('#setting-logo').attr('src', "{{ asset('uploads/images') }}/"+data.logo+"?"+new Date().getTime());
                         $('#favicon').attr('href', "{{ asset('uploads/images/fav_') }}"+data.logo+"?"+new Date().getTime());
                         showAlert(data.message, 'bg-blue');
                         $('.overlay-logo').hide();
@@ -384,7 +384,7 @@
                 form.append('_token', '{{ csrf_token() }}');
                 form.append('poster', poster);
                 $.ajax({
-                    url: "{{url('pengaturan/update_poster')}}",
+                    url: "{{url('setting/update_poster')}}",
                     data: form,
                     dataType: 'json',
                     cache: false,
@@ -395,7 +395,7 @@
                         $('#poster_image').attr('src', "{{ asset('uploads/images/posters') }}/"+data.poster);
                         $('#fit_poster_image').css('background', "url('{{ asset('uploads/images/posters') }}/fit_"+data.poster);
                         $('#fit_poster_image').css('background-size', 'cover');
-                        $('#pengaturan-poster').attr('src', "{{ asset('uploads/images/posters') }}/"+data.poster+"?"+new Date().getTime());
+                        $('#setting-poster').attr('src', "{{ asset('uploads/images/posters') }}/"+data.poster+"?"+new Date().getTime());
                         showAlert(data.message, 'bg-blue');
                         $('.overlay-poster').hide();
                     },
@@ -419,7 +419,7 @@
                 form.append('_token', '{{ csrf_token() }}');
                 form.append('bg', bg);
                 $.ajax({
-                    url: "{{url('pengaturan/update_bg')}}",
+                    url: "{{url('setting/update_bg')}}",
                     data: form,
                     dataType: 'json',
                     cache: false,
@@ -428,7 +428,7 @@
                     type: 'POST',
                     success: function(data) {
                         $('#bg').attr('src', "{{ asset('uploads/images') }}/"+data.bg+"?"+new Date().getTime());
-                        $('#pengaturan-bg').attr('src', "{{ asset('uploads/images') }}/"+data.bg+"?"+new Date().getTime());
+                        $('#setting-bg').attr('src', "{{ asset('uploads/images') }}/"+data.bg+"?"+new Date().getTime());
                         showAlert(data.message, 'bg-blue');
                         $('.overlay-bg').hide();
                     },
