@@ -100,7 +100,8 @@
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Call Search -->
-                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                    <!-- <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li> -->
+                    <li><a href="javascript:void(0);" onclick="logout();" title="Sign Out"><i class="material-icons">input</i></a></li>
                     <!-- #END# Call Search -->
                     <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li>
                 </ul>
@@ -125,9 +126,7 @@
                             <li><a href="{{ url('/profile') }}"><i class="material-icons">person</i>Profile</a></li>
                             <li role="seperator" class="divider"></li>
                             <li>
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); 
-                                    document.getElementById('logout-form').submit();"><i class="material-icons">input</i>Sign Out
-                                </a>
+                                <a href="javascript:void(0);" onclick="logout();"><i class="material-icons">input</i>Sign Out</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
@@ -145,6 +144,12 @@
                         <a href="{{ url('home') }}">
                             <i class="material-icons">home</i>
                             <span>Home</span>
+                        </a>
+                    </li>
+                    <li<?= request()->is('profile') ? ' class="active"' : ''; ?>>
+                        <a href="{{ url('profile') }}">
+                            <i class="material-icons">person</i>
+                            <span>Profile</span>
                         </a>
                     </li>
                     @if($user->group_id == 1)
@@ -172,10 +177,10 @@
             <!-- Footer -->
             <div class="legal">
                 <div class="copyright">
-                    {!! $setting->copyright !!}
+                    {{ $setting->copyright }}
                 </div>
                 <div class="version">
-                    {!! $setting->version !!}
+                    <b>{{ $setting->version }}</b>
                 </div>
             </div>
             <!-- #Footer -->
@@ -432,6 +437,19 @@
         function isEmail(email) {
             var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             return regex.test(email);
+        }
+        function logout() {
+            swal({
+                title: "Yakin?",
+                text: "mau keluar aplikasi?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Ya, keluar aja!",
+                closeOnConfirm: false
+            }, function () {
+                $('#logout-form').submit();
+            });
         }
     </script>
 

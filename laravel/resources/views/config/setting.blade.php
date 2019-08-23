@@ -232,6 +232,7 @@
                     swal("Berhasil!", data, "success");
                     $('#logo').attr('src', "{{ asset('uploads/images/mtk_white.png') }}");
                     $('#setting-logo').attr('src', "{{ asset('uploads/images/mtk_white.png') }}");
+                    $('#favicon').attr('href', "{{ asset('uploads/images/fav_mtk_white.png') }}?"+new Date().getTime());
                 },
                 error: function(data) {
                     swal("Gagal!", data, "error");

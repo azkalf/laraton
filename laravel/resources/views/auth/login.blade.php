@@ -1,10 +1,13 @@
 @extends('layouts.loginbsb')
 
+<?php
+    $setting = App\Setting::first();
+?>
 @section('content')
 <div class="login-box">
     <div class="logo">
-        <a href="javascript:void(0);">Admin<b>BSB</b></a>
-        <small>Admin BootStrap Based - Material Design</small>
+        <a href="javascript:void(0);">{{$setting->appname}}</a>
+        <small>{{$setting->subname}}</small>
     </div>
     <div class="card">
         <div class="body">
@@ -35,11 +38,11 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-8 p-t-5">
-                        {{ Form::checkbox('remember', 1, old('remember') ? true : false, ['class'=>'filled-in chk-col-pink']) }}
+                        {{ Form::checkbox('remember', 1, old('remember') ? true : false, ['class'=>'filled-in chk-col-green']) }}
                         <label for="rememberme">Ingat Saya</label>
                     </div>
                     <div class="col-xs-4">
-                        <button class="btn btn-block bg-pink waves-effect" type="submit">LOGIN</button>
+                        <button class="btn btn-block bg-green waves-effect" type="submit">LOGIN</button>
                     </div>
                 </div>
                 <div class="row m-t-15 m-b--20">
