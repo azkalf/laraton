@@ -54,7 +54,7 @@ class HomeController extends Controller
         $user = Auth::User();
         if ($request->hasFile('photo')) {
             $photo = $request->file('photo');
-            $destination = base_path().'/public/uploads/images/users/';
+            $destination = public_path().'/uploads/images/users/';
             $filename = 'photo_'.$user->name.'.'.$photo->getClientOriginalExtension();
             if ($photo->isValid()) {
                 if (!empty($user->photo)) {
@@ -87,7 +87,7 @@ class HomeController extends Controller
         $user = Auth::User();
         if ($request->hasFile('poster')) {
             $poster = $request->file('poster');
-            $destination = base_path().'/public/uploads/images/posters/';
+            $destination = public_path().'/uploads/images/posters/';
             $filename = 'poster_'.$user->name.'.'.$poster->getClientOriginalExtension();
             if ($poster->isValid()) {
                 if (!empty($user->poster)) {
